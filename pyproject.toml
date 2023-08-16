@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "camerametrics"
+version = "0.1.0"
+description = ""
+authors = ["Kobus Coetzer <kobuskc@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+httpx = "^0.24.1"
+prometheus-client = "^0.17.1"
+requests = "^2.31.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-mock = "^3.11.1"
+pytest-asyncio = "^0.21.1"
+coverage = "^7.3.0"
+pytest-cov = "^4.1.0"
+
+[tool.pytest.ini_options]
+console_output_style = "progress"
+log_cli = "True"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+testpaths = "tests"
+python_files = "test_*.py"
+pythonpath = "camerametrics"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
